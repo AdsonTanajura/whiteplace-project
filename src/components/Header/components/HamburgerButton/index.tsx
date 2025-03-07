@@ -1,6 +1,5 @@
 import React from 'react';
 import { CloseButtom, HamburgerButtonContainer, OpenButton } from './styles';
-import LoginButton from '@/components/LoginButton';
 import { HamburgerButtonProps } from './types';
 
 const HamburgerButton = ({ isOpen, setIsOpen }: HamburgerButtonProps) => {
@@ -8,11 +7,16 @@ const HamburgerButton = ({ isOpen, setIsOpen }: HamburgerButtonProps) => {
     <HamburgerButtonContainer>
       {isOpen ? (
         <>
-          <LoginButton />
-          <CloseButtom onClick={() => setIsOpen(false)} />
+          <CloseButtom
+            data-testid="hamburger-button-close"
+            onClick={() => setIsOpen(false)}
+          />
         </>
       ) : (
-        <OpenButton onClick={() => setIsOpen(true)} />
+        <OpenButton
+          data-testid="hamburger-button-open"
+          onClick={() => setIsOpen(true)}
+        />
       )}
     </HamburgerButtonContainer>
   );

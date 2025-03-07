@@ -2,11 +2,12 @@
 
 exports[`<HamburguerButton> should render HamburguerButtom 1`] = `
 <div>
-  <div
-    class="sc-FEMpB hxJnmp"
+  <button
+    class="sc-FEMpB hsGFWb"
   >
     <svg
       class="sc-dVBluf dlzNfH"
+      data-testid="hamburger-button-open"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -19,23 +20,42 @@ exports[`<HamburguerButton> should render HamburguerButtom 1`] = `
         d="M16 5H0V4h16v1zm0 8H0v-1h16v1zm0-4.008H0V8h16v.992z"
       />
     </svg>
-  </div>
+  </button>
+</div>
+`;
+
+exports[`<HamburguerButton> should show the HamburgerButton close 1`] = `
+<div>
+  <button
+    class="sc-FEMpB hsGFWb"
+  >
+    <svg
+      class="sc-dVBluf dlzNfH"
+      data-testid="hamburger-button-open"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      stroke-width="0"
+      viewBox="0 0 16 16"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 5H0V4h16v1zm0 8H0v-1h16v1zm0-4.008H0V8h16v.992z"
+      />
+    </svg>
+  </button>
 </div>
 `;
 
 exports[`<HamburguerButton> should show the HamburgerButton open 1`] = `
 <div>
-  <div
-    class="sc-FEMpB hxJnmp"
+  <button
+    class="sc-FEMpB hsGFWb"
   >
-    <button
-      data-testid="clerk-sign-in-button"
-    >
-      Login
-    </button>
-    <button />
     <svg
       class="sc-gjcoXW WxPWK"
+      data-testid="hamburger-button-close"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -50,6 +70,6 @@ exports[`<HamburguerButton> should show the HamburgerButton open 1`] = `
         fill-rule="evenodd"
       />
     </svg>
-  </div>
+  </button>
 </div>
 `;
