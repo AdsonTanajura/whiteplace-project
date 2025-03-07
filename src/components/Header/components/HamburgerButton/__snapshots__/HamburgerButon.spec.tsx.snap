@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<HamburguerButton> should render HamburguerButtom 1`] = `
+exports[`<HamburguerButton> should render HamburguerButton 1`] = `
 <div>
   <button
     class="sc-FEMpB hsGFWb"
