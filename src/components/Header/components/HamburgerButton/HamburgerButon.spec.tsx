@@ -22,8 +22,8 @@ describe('<HamburguerButton>', () => {
       <HamburgerButton isOpen={true} setIsOpen={fn} />
     );
 
-    const hamburgerButtonClose = getByTestId('hamburger-button-close');
-    const hamburgerButtonsOpen = queryAllByTestId('hamburger-button-open');
+    const hamburgerButtonClose = getByTestId('hamburger-button-true');
+    const hamburgerButtonsOpen = queryAllByTestId('hamburger-button-false');
 
     expect(container).toMatchSnapshot();
     expect(hamburgerButtonClose).toBeVisible();
@@ -37,8 +37,8 @@ describe('<HamburguerButton>', () => {
       <HamburgerButton isOpen={false} setIsOpen={fn} />
     );
 
-    const hamburgerButtonOpen = getByTestId('hamburger-button-open');
-    const hamburgerButtonClose = queryAllByTestId('hamburger-button-close');
+    const hamburgerButtonOpen = getByTestId('hamburger-button-false');
+    const hamburgerButtonClose = queryAllByTestId('hamburger-button-true');
 
     expect(container).toMatchSnapshot();
     expect(hamburgerButtonOpen).toBeVisible();

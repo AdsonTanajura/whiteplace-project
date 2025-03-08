@@ -3,11 +3,10 @@
 exports[`<HamburguerButton> should render HamburguerButton 1`] = `
 <div>
   <button
-    class="sc-FEMpB hsGFWb"
+    class="sc-FEMpB kcGAXG"
   >
     <svg
-      class="sc-dVBluf dlzNfH"
-      data-testid="hamburger-button-open"
+      data-testid="hamburger-button-false"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -27,11 +26,10 @@ exports[`<HamburguerButton> should render HamburguerButton 1`] = `
 exports[`<HamburguerButton> should show the HamburgerButton close 1`] = `
 <div>
   <button
-    class="sc-FEMpB hsGFWb"
+    class="sc-FEMpB kcGAXG"
   >
     <svg
-      class="sc-dVBluf dlzNfH"
-      data-testid="hamburger-button-open"
+      data-testid="hamburger-button-false"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -51,11 +49,10 @@ exports[`<HamburguerButton> should show the HamburgerButton close 1`] = `
 exports[`<HamburguerButton> should show the HamburgerButton open 1`] = `
 <div>
   <button
-    class="sc-FEMpB hsGFWb"
+    class="sc-FEMpB kcGAXG"
   >
     <svg
-      class="sc-gjcoXW WxPWK"
-      data-testid="hamburger-button-close"
+      data-testid="hamburger-button-true"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
