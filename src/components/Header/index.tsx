@@ -2,21 +2,16 @@
 
 import React, { useState } from 'react';
 
-import { HeaderContainer, LogoContainer } from './styles';
+import { HeaderContainer } from './styles';
 import HamburgerButton from './components/HamburgerButton';
-import Logo from '../../../public/logo.svg';
+import WhitepaceLogo from '../WhitepaceLogo';
+import MobileMenu from './components/MobileMenu';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   return (
     <HeaderContainer>
-      {isOpen ? null : (
-        <LogoContainer>
-          <Logo width={134} height={24} />
-        </LogoContainer>
-      )}
-
+      {isOpen ? <MobileMenu /> : <WhitepaceLogo />}
       <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
     </HeaderContainer>
   );

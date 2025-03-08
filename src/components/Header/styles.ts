@@ -3,11 +3,16 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   background-color: #043873;
+  height: 100vh;
+  max-height: 56px;
   width: 100%;
-  padding: 16px;
-`;
+  padding: 8px 16px;
 
-export const LogoContainer = styled.div`
-  display: flex;
-  align-items: center;
+  @media (min-width: 768px) {
+    max-height: 66px;
+  }
+
+  @media (min-width: 1152px) {
+    max-height: 92px;
+  }
 `;
