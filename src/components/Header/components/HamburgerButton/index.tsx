@@ -1,23 +1,14 @@
 import React from 'react';
-import { CloseButtom, HamburgerButtonContainer, OpenButton } from './styles';
+import { HamburgerButtonContainer } from './styles';
 import { HamburgerButtonProps } from './types';
+import { VscMenu } from 'react-icons/vsc';
+import { VscClose } from 'react-icons/vsc';
 
 const HamburgerButton = ({ isOpen, setIsOpen }: HamburgerButtonProps) => {
+  const Icon = isOpen ? VscClose : VscMenu;
   return (
-    <HamburgerButtonContainer>
-      {isOpen ? (
-        <>
-          <CloseButtom
-            data-testid="hamburger-button-close"
-            onClick={() => setIsOpen(false)}
-          />
-        </>
-      ) : (
-        <OpenButton
-          data-testid="hamburger-button-open"
-          onClick={() => setIsOpen(true)}
-        />
-      )}
+    <HamburgerButtonContainer onClick={() => setIsOpen(!isOpen)}>
+      <Icon data-testid={`hamburger-button-${isOpen}`} />
     </HamburgerButtonContainer>
   );
 };
