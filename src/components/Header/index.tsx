@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import { HeaderContainer } from './styles';
 import HamburgerButton from './components/HamburgerButton';
@@ -9,10 +9,20 @@ import MobileMenu from './components/MobileMenu';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (ref.current) {
+      setHeaderHeight(ref.current.clientHeight);
+      console.log(headerHeight);
+    }
+  }, [isOpen, headerHeight]);
+
   return (
-    <HeaderContainer>
-      {isOpen ? <MobileMenu /> : <WhitepaceLogo />}
+    <HeaderContainer ref={ref}>
       <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
+      {isOpen ? <MobileMenu headerHeight={headerHeight} /> : <WhitepaceLogo />}
     </HeaderContainer>
   );
 };
