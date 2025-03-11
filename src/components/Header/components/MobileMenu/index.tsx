@@ -11,24 +11,29 @@ import {
 import LoginButton from '@/components/LoginButton';
 import RegisterButtom from '@/components/RegisterButtom';
 import { IoIosArrowDown } from 'react-icons/io';
+import WhitepaceLogo from '@/components/WhitepaceLogo';
 
 type MobileMenuProps = {
   headerHeight?: number;
+  isInDescktop?: boolean;
 };
 
-const MobileMenu = ({ headerHeight }: MobileMenuProps) => {
+const MobileMenu = ({ headerHeight, isInDescktop }: MobileMenuProps) => {
+  const LogoInDescktop = isInDescktop ? <WhitepaceLogo /> : null;
+
   return (
     <MobileMenuContainer>
       <FirstColumn>
         <LoginButton />
         <RegisterButtom>Try Whitepace free</RegisterButtom>
       </FirstColumn>
+      {LogoInDescktop}
       <MenuContainer headerHeight={headerHeight}>
         <MobileNavBar>
           <MobileNavBarList>
             <MobileNavBarItem>
               <MobileNavBarLink>
-                Products <IoIosArrowDown />{' '}
+                Products <IoIosArrowDown />
               </MobileNavBarLink>
             </MobileNavBarItem>
             <MobileNavBarItem>
