@@ -10,9 +10,18 @@ export const HeaderContainer = styled.header`
 
   @media (min-width: 768px) {
     max-height: 66px;
+    padding: 8px 32px;
   }
 
-  @media (min-width: 1152px) {
+  @media (min-width: 1024px) {
     max-height: 92px;
   }
+`;
+
+export const HeaderMenuContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
 `;

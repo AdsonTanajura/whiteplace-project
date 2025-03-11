@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const MobileMenuContainer = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
 `;
 
@@ -11,6 +12,10 @@ export const FirstColumn = styled.div`
   gap: 16px;
   width: 100%;
   height: 100%;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const MenuContainer = styled.div.attrs<{ headerHeight?: number }>(

@@ -6,7 +6,13 @@ export const SignInButtonStyled = styled(SignInButton)`
   background-color: #ffe492;
   border: none;
   align-items: center;
+  text-align: center;
   font-size: 12px;
   padding: 8px 20px;
   border-radius: 8px;
+
+  @media (min-width: 1024px) {
+    min-height: 60px;
+    max-width: 227px;
+  }
 `;
