@@ -25,3 +25,27 @@ export const HeaderMenuContainer = styled.div`
   gap: 20px;
   align-items: center;
 `;
+
+export const NavBar = styled.nav`
+  padding: 16px;
+`;
+
+export const NavBarList = styled.ul`
+  display: flex;
+  gap: 32px;
+  height: 100%;
+  flex-wrap: wrap;
+`;
+
+export const NavBarItem = styled.li`
+  gap: 10px;
+`;
+export const NavBarLink = styled.a`
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  color: #ffffff;
+  grid-template-columns: 1fr 0fr;
+  column-gap: 4px;
+  font-size: 14px;
+`;
